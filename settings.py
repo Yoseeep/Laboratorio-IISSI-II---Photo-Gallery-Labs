@@ -2,16 +2,22 @@
 # Project-specific settings
 ###############################################################################
 
+import os
+from dotenv import load_dotenv
+
+# Cargar variables del archivo .env
+load_dotenv()
+
 # Shows debug messages while Silence is running
 DEBUG_ENABLED = False
 
 # Database connection details
 DB_CONN = {
-    "host": "127.0.0.1",
-    "port": 3306,
-    "username": "iissi_user",
-    "password": "iissi$user",
-    "database": "gallery",
+    "host": os.getenv("DB_HOST", "127.0.0.1"),
+    "port": int(os.getenv("DB_PORT", 3306)),
+    "username": os.getenv("DB_USERNAME"),
+    "password": os.getenv("DB_PASSWORD"),
+    "database": os.getenv("DB_DATABASE"),
 }
 
 # The sequence of SQL scripts located in the sql/ folder that must

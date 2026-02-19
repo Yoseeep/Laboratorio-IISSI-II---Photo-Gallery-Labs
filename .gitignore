@@ -4,6 +4,9 @@
 
 .vscode/
 
+## Variables de entorno
+.env
+
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
