@@ -1,0 +1,58 @@
+{
+    "getAll": {
+        "description": "Gets all entries from 'BadWords'",
+        "route": "/badwords",
+        "method": "GET",
+        "sql": "SELECT * FROM BadWords",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "getById": {
+        "description": "Gets an entry from 'BadWords' by its primary key",
+        "route": "/badwords/$wordId",
+        "method": "GET",
+        "sql": "SELECT * FROM BadWords WHERE wordId = $wordId",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "create": {
+        "description": "Creates a new entry in 'BadWords'",
+        "route": "/badwords",
+        "method": "POST",
+        "sql": "INSERT INTO BadWords (word) VALUES ($word)",
+        "request_body_params": [
+            "word"
+        ],
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "update": {
+        "description": "Updates an existing entry in 'BadWords' by its primary key",
+        "route": "/badwords/$wordId",
+        "method": "PUT",
+        "sql": "UPDATE BadWords SET word = $word WHERE wordId = $wordId",
+        "request_body_params": [
+            "word"
+        ],
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "delete": {
+        "description": "Deletes an existing entry in 'BadWords' by its primary key",
+        "route": "/badwords/$wordId",
+        "method": "DELETE",
+        "sql": "DELETE FROM BadWords WHERE wordId = $wordId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ]
+    }
+}
