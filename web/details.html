@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <content ="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <script src="js/libs/bootstrap.min.js"></script>
+    <title>Photo Details</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/utils/include.js"></script>
+  </head>
+  <body class="dark">
+    <div id="page-header"></div>
+
+    <div class="row text-center">
+      <div class="col-md">
+        <div class="col-md">
+          <h3>Samoyed</h3>
+          <h6>A very good boy</h6>
+          <p>
+            Uploaded by <a href="user_profile.html">User 1</a> on 12/01/2021
+          </p>
+
+          <hr />
+
+          <img src="https://i.ibb.co/tY1Jcnc/wlZCfCv.jpg" class="img-fluid" />
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div>
+          <button class="btn btn-primary">Edit this photo</button>
+          <button class="btn btn-danger">Delete this photo</button>
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="rating-input">Rate this photo:</label>
+            <select
+              id="rating-input"
+              name="rating"
+              class="form-control text-center"
+            >
+              <option value="1">*</option>
+              <option value="2">**</option>
+              <option value="3">***</option>
+              <option value="4">****</option>
+              <option value="5">*****</option>
+            </select>
+            <button type="submit" class="btn btn-success">Rate</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row text-center mt-5">
+      <div class="col-md">
+        <a href="index.html" class="btn btn-primary">Return to the gallery</a>
+      </div>
+    </div>
+
+    <script>
+      include("header.html", "#page-header");
+    </script>
+  </body>
+</html>
