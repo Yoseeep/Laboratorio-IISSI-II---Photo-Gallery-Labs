@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <script src="js/libs/bootstrap.min.js"></script>
+    <title>Login</title>
+    <script src="js/utils/include.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="dark">
+    <div id="page-header"></div>
+    <h2>Login to your account:</h2>
+
+    <form class="container-fluid">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-6">
+            <label for="username-input">Username:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="username-input"
+              name="username"
+              placeholder="Username"
+            />
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="password-input">Password:</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password-input"
+                name="password"
+                placeholder="Password"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <script>
+      include("header.html", "#page-header");
+    </script>
+  </body>
+</html>
