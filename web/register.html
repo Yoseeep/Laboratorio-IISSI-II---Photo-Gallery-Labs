@@ -6,12 +6,126 @@
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <script src="js/libs/bootstrap.min.js"></script>
     <title>Subir foto</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
     <script src="js/utils/include.js"></script>
   </head>
   <body class="dark">
     <div id="page-header"></div>
-    <h2>Register a new user:</h2>
+
+    <div class="container mt-2">
+      <div class="row text-center">
+        <div class="col-md">
+          <h3>Register a new user</h3>
+        </div>
+        <hr />
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md">
+          <div class="form-group p-2">
+            <label for="firstname-input">First name:</label>
+            <input
+              type="text"
+              class="form-control text-light bg-dark"
+              id="firstname-input"
+              name="firstName"
+              placeholder="First name"
+            />
+          </div>
+        </div>
+
+        <div class="col-md">
+          <div class="form-group p-2">
+            <label for="lastname-input">Last name:</label>
+            <input
+              type="text"
+              class="form-control text-light bg-dark"
+              id="lastname-input"
+              name="lastName"
+              placeholder="Last name"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <div class="form-group p-2">
+            <label for="email-input">Email:</label>
+            <input
+              type="email"
+              class="form-control text-light bg-dark"
+              id="email-input"
+              name="email"
+              placeholder="Email"
+            />
+          </div>
+        </div>
+
+        <div class="col-md">
+          <div class="form-group p-2">
+            <label for="phone-input">Phone number:</label>
+            <input
+              type="text"
+              class="form-control text-light bg-dark"
+              id="phone-input"
+              name="phone"
+              placeholder="Phone number"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <div class="form-group p-2">
+            <label for="username-input">Username:</label>
+            <input
+              type="text"
+              class="form-control text-light bg-dark"
+              id="username-input"
+              name="username"
+              placeholder="Username"
+            />
+          </div>
+        </div>
+
+        <div class="col-md">
+          <div class="form-group p-2">
+            <label for="password-input">Password:</label>
+            <input
+              type="password"
+              class="form-control text-light bg-dark"
+              id="password-input"
+              name="password"
+              placeholder="Password"
+            />
+          </div>
+        </div>
+
+        <div class="col-md">
+          <div class="form-group p-2">
+            <label for="password2-input">Repeat your password:</label>
+            <input
+              type="password"
+              class="form-control text-light bg-dark"
+              id="password2-input"
+              name="password2"
+              placeholder="Password"
+            />
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md text-center">
+            <hr>
+            <button type="submit" class="btn btn-primary">Register</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <h2>Register a new user:</h2>
     <form>
       <div class="input-group">
         <label for="firstname-input">First name:</label>
@@ -61,7 +175,7 @@
       <div class="input-group">
         <input type="submit" />
       </div>
-    </form>
+    </form> -->
 
     <script>
       include("header.html", "#page-header");
