@@ -2,11 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <script src="js/libs/bootstrap.min.js"></script>
     <title>Subir foto</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/utils/include.js"></script>
   </head>
   <body class="dark">
+    <div id="page-header"></div>
     <h2>Register a new user:</h2>
     <form>
       <div class="input-group">
@@ -58,5 +62,9 @@
         <input type="submit" />
       </div>
     </form>
+
+    <script>
+      include("header.html", "#page-header");
+    </script>
   </body>
 </html>
