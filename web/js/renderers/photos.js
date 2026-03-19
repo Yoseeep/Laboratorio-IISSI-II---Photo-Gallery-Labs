@@ -1,5 +1,5 @@
 "use strict";
-import { parseHTML } from "/js/utils/parseHTML.js";
+import { parseHTML } from "/web/js/utils/parseHTML.js";
 
 const photoRenderer = {
   asCard: function (photo) {
