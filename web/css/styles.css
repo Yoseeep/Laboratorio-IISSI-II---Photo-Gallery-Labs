@@ -90,3 +90,10 @@ div.navigation > a {
     min-width: 150px;
 }
 
+img.photo-user-avatar {
+    max-width: 30px;
+    height: auto;
+    border-radius: 50%;
+}
+
+
