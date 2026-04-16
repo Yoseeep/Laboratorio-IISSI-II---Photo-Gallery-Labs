@@ -60,7 +60,7 @@
         "route": "/photos/$photoId",
         "method": "DELETE",
         "sql": "DELETE FROM Photos WHERE photoId = $photoId",
-        "auth_required": true,
+        "auth_required": false,
         "allowed_roles": [
             "*"
         ]

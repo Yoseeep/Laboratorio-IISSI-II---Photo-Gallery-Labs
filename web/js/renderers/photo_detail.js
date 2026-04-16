@@ -14,7 +14,24 @@ function main() {
     return;
   }
 
-  loadPhotoDetails();}
+  let deleteButton = document.querySelector("#button-delete");
+  deleteButton.onclick = handleDelete;
+
+  loadPhotoDetails();
+}
+
+async function handleDelete(event) {
+  let answer = confirm("Do you really want to delete this photo?");
+
+  if (answer) {
+    try {
+      await PhotosAPI_auto.delete(photoId);
+      window.location = "/index.html";
+    } catch (err) {
+      messageRenderer.showErrorMessage(err.response.data.message);
+    }
+  }
+}
 
 async function loadPhotoDetails() {
   let photoContainer = document.querySelector("#photo-details-column");
