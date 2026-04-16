@@ -9,13 +9,16 @@ let urlParams = new URLSearchParams(window.location.search);
 let photoId = urlParams.get("photoId");
 
 function main() {
-  if (photoId === null) {
+  if (photoId === null) { 
     messageRenderer.showErrorMessage("Please, provide a photoId");
     return;
   }
 
   let deleteButton = document.querySelector("#button-delete");
   deleteButton.onclick = handleDelete;
+
+  let editButton = document.querySelector("#button-edit");
+  editButton.onclick = handleEdit;
 
   loadPhotoDetails();
 }
@@ -31,6 +34,10 @@ async function handleDelete(event) {
       messageRenderer.showErrorMessage(err.response.data.message);
     }
   }
+}
+
+function handleEdit(event) {
+    window.location.href = "edit_photo.html?photoId=" + photoId;
 }
 
 async function loadPhotoDetails() {
