@@ -32,7 +32,7 @@
             "visibility",
             "userId"
         ],
-        "auth_required": true,
+        "auth_required": false,
         "allowed_roles": [
             "*"
         ]
