@@ -8,7 +8,8 @@ const userValidator = {
     let lastName = formData.get("lastName");
     let password = formData.get("password");
     let password2 = formData.get("password2");
-    let phoneNumber = formData.get("phone");
+    let phoneNumber = formData.get("telephone");
+    console.log(firstName, lastName, password, password2, phoneNumber);
 
     if (firstName.length < 3 || lastName.length < 3) {
       errors.push("The first and last name should have more than 3 characters");
@@ -21,6 +22,7 @@ const userValidator = {
     if (phoneNumber.length < 9) {
       errors.push("The phone number should have at least 9 numbers");
     }
+    console.log(errors);
     return errors;
 
   },
