@@ -31,10 +31,24 @@ function handleSubmitRegister(event) {
     }
 }
 
+// async function sendRegister(formData) {
+//     try {
+//         let loginData = await authAPI_auto.register(formData);
+//         console.log(loginData);
+//     } catch (err) {
+//         messageRenderer.showErrorMessage("Error registering a new user", err);
+//     }
+// }
+
 async function sendRegister(formData) {
     try {
         let loginData = await authAPI_auto.register(formData);
         console.log(loginData);
+        let sessionToken = loginData.sessionToken;
+        let loggedUser = loginData.user;
+
+        sessionManager.login(sessionToken, loggedUser);
+        window.location.href = "index.html";
     } catch (err) {
         messageRenderer.showErrorMessage("Error registering a new user", err);
     }
